@@ -1,9 +1,9 @@
 <?php require_once('create-class.php'); ?>
 
 <?php
-// $mike = new Employee('Mike', 25, 50000);
-$mike = new Employee();
-$mike->name = 'Mike';
+$mike = new Employee('Mike', 25, 50000);
+// $mike = new Employee();
+// $mike->name = 'Mike';
 echo $mike->name;
 
 echo "<h3>result of get_class(object_name) function</h3>";
@@ -27,4 +27,7 @@ echo "</pre>";
 
 echo "<h3>result of property_exists(object_name, property_name) function</h3>";
 echo "<p>if age exists in mike : ". (property_exists($mike, 'age') ? 'true' : 'false') . "</p>";
+
+echo "<h3>call functions in the classes</h3>";
+echo "<p>employee salary : " . $mike->getSalary() . "</p>";
 ?>

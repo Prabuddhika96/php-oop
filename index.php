@@ -30,4 +30,12 @@ echo "<p>if age exists in mike : ". (property_exists($mike, 'age') ? 'true' : 'f
 
 echo "<h3>call functions in the classes</h3>";
 echo "<p>employee salary : " . $mike->getSalary() . "</p>";
+
+$email="prabuddhika@gmail.com";
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+ echo "Invalid email format";
+}
+else{
+    echo "Valid email format";
+}
 ?>
